@@ -192,15 +192,6 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras import layers
 
-"""
-
-Since we'll be turning our sentences into numbers, it's a good idea to figure out how many words are in each sentence.
-
-When our model goes through our sentences, it works best when they're all the same length (this is important for creating batches of the same size tensors).
-
-For example, if one sentence is eight words long and another is 29 words long, we want to pad the eight word sentence with zeros so it ends up being the same length as the 29 word sentence.
-
-Let's write some code to find the average length of sentences in the training set"""
 
 # How long is each sentence on average?
 sent_lens = [len(sentence.split()) for sentence in train_sentences]
